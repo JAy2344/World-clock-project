@@ -9,12 +9,25 @@
     <title>World Clock </title>
 </head>
 <body>
+    <div class="container">
     <header>
         <h1>World Clock</h1>
     </header>
 
 
-    <main></main>
+    <main>
+        <select id="times" >
+            <option value="">---Select a City---</option>
+            <option value="paris">Paris</option>
+            <option value="sydney">Sydney</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="london">London</option>
+        </select>
+        <div class="cities">
+            <div class="time"></div>
+            <div  class="date"></div>
+        </div>
+    </main>
     
 
     <footer>
@@ -25,6 +38,7 @@
           <a href="https://world-clock-project-shecodes-2025.netlify.app/" target="_blank">hosted on Netlify</a>
         </p>
     </footer>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
