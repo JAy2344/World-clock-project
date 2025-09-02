@@ -1,11 +1,13 @@
 body{
-    text-align: center;
+    color: palevioletred;
 }
 a{
     color: blueviolet;
 }
 
-
+h1{
+    text-align: center;
+}
 
 
 
