@@ -7,7 +7,7 @@ function updatetime() {
     let LondonTime = moment.tz("Europe/London");
 
     LondonDateElement.innerHTML = LondonTime.format("MMMM Do YYYY");
-    LondonTimeElement.innerHTML = LondonTime.format("HH:mm:ss [<small>]a[</small>]"
+    LondonTimeElement.innerHTML = LondonTime.format("HH:mm:ss [<small>]A[</small>]"
 
     );
   }
@@ -20,7 +20,7 @@ function updatetime() {
     let SydneyTime = moment.tz("Australia/Sydney");
 
     SydneyDateElement.innerHTML = SydneyTime.format(" MMMM Do YYYY");
-    SydneyTimeElement.innerHTML = SydneyTime.format("HH:mm:ss [<small>]a[</small>]"
+    SydneyTimeElement.innerHTML = SydneyTime.format("HH:mm:ss [<small>]A[</small>]"
 
     );
   }
@@ -33,7 +33,7 @@ function updatetime() {
     let TokyoTime = moment.tz("Asia/Tokyo");
 
     TokyoDateElement.innerHTML = TokyoTime.format("MMMM Do YYYY ");
-    TokyoTimeElement.innerHTML = TokyoTime.format("HH:mm:ss [<small>]a[</small>]"
+    TokyoTimeElement.innerHTML = TokyoTime.format("HH:mm:ss [<small>]A[</small>]"
 
     );
   }
@@ -46,7 +46,7 @@ function updatetime() {
     let ParisTime = moment.tz("Europe/Paris");
 
     ParisDateElement.innerHTML = ParisTime.format("MMMM Do YYYY");
-    ParisTimeElement.innerHTML = ParisTime.format("HH:mm:ss [<small>]a[</small>]"
+    ParisTimeElement.innerHTML = ParisTime.format("HH:mm:ss [<small>]A[</small>]"
 
     );
   }
@@ -54,10 +54,11 @@ function updatetime() {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  console.log(cityTimeZone);
 
-  if (cityTimeZone === "current") {
-    cityTimeZone = moment.tz.guess();
-  }
+ // if (cityTimeZone === "current") {
+    //cityTimeZone = moment.tz.guess();
+  
 
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment.tz(cityTimeZone);
@@ -72,14 +73,17 @@ function updateCity(event) {
       <div class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]"
 
       )} 
-        <small>${cityTime.format("a")}</small>
+        <small>${cityTime.format("A")}</small>
       </div>
     </div>
   `;
 }
 
+
 updatetime();
+updateCity
 setInterval(updatetime, 1000);
+setInterval(updateCity,1000)
 
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
