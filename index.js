@@ -1,19 +1,9 @@
 function updatetime() {
-  // London
-  let LondonElement = document.querySelector("#london-eur");
-  if (LondonElement) {
-    let LondonDateElement = LondonElement.querySelector(".date");
-    let LondonTimeElement = LondonElement.querySelector(".time");
-    let LondonTime = moment.tz("Europe/London");
-    LondonDateElement.innerHTML = LondonTime.format("MMMM Do YYYY");
-    LondonTimeElement.innerHTML = LondonTime.format("HH:mm:ss A");
-  }
-
   // Sydney
   let SydneyElement = document.querySelector("#sydney-aus");
   if (SydneyElement) {
-    let SydneyDateElement = SydneyElement.querySelector("#syd-date");
-    let SydneyTimeElement = SydneyElement.querySelector("#syd-time");
+    let SydneyDateElement = SydneyElement.querySelector(".date");
+    let SydneyTimeElement = SydneyElement.querySelector(".time");
     let SydneyTime = moment.tz("Australia/Sydney");
     SydneyDateElement.innerHTML = SydneyTime.format("MMMM Do YYYY");
     SydneyTimeElement.innerHTML = SydneyTime.format("HH:mm:ss A");
@@ -22,21 +12,11 @@ function updatetime() {
   // Tokyo
   let TokyoElement = document.querySelector("#tokyo-asia");
   if (TokyoElement) {
-    let TokyoDateElement = TokyoElement.querySelector("#tok-date");
-    let TokyoTimeElement = TokyoElement.querySelector("#tok-time");
+    let TokyoDateElement = TokyoElement.querySelector(".date");
+    let TokyoTimeElement = TokyoElement.querySelector(".time");
     let TokyoTime = moment.tz("Asia/Tokyo");
     TokyoDateElement.innerHTML = TokyoTime.format("MMMM Do YYYY");
     TokyoTimeElement.innerHTML = TokyoTime.format("HH:mm:ss A");
-  }
-
-  // Paris
-  let ParisElement = document.querySelector("#paris-france");
-  if (ParisElement) {
-    let ParisDateElement = ParisElement.querySelector("#par-date");
-    let ParisTimeElement = ParisElement.querySelector("#par-time");
-    let ParisTime = moment.tz("Europe/Paris");
-    ParisDateElement.innerHTML = ParisTime.format("MMMM Do YYYY");
-    ParisTimeElement.innerHTML = ParisTime.format("HH:mm:ss A");
   }
 }
 
