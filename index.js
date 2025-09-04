@@ -18,6 +18,7 @@ function updatetime() {
     TokyoDateElement.innerHTML = TokyoTime.format("MMMM Do YYYY");
     TokyoTimeElement.innerHTML = TokyoTime.format("HH:mm:ss A");
   }
+ 
 }
 
 let intervalId = setInterval(updatetime, 1000);
@@ -36,25 +37,20 @@ function updateCity(event) {
   if (!cityTimeZone) {
     clearInterval(intervalId);
     citiesElement.innerHTML = `
-      <div class="city" id="london-eur">
-          <h2>London</h2>
+      <div class="city" id="sydney-aus">
+          <h2>Sydney</h2>
           <div class="date"></div>
           <div class="time"></div>
       </div>
-      <div class="city" id="sydney-aus">
-          <h2>Sydney</h2>
-          <div class="date" id="syd-date"></div>
-          <div class="time" id="syd-time"></div>
-      </div>
       <div class="city" id="tokyo-asia">
           <h2>Tokyo</h2>
-          <div class="date" id="tok-date"></div>
-          <div class="time" id="tok-time"></div>
+          <div class="date"></div>
+          <div class="time"></div>
       </div>
-      <div class="city" id="paris-france">
-          <h2>Paris</h2>
-          <div class="date" id="par-date"></div>
-          <div class="time" id="par-time"></div>
+      <div class="city" id="samoa">
+          <h2>Samoa</h2>
+          <div class="date"></div>
+          <div class="time"></div>
       </div>
     `;
     intervalId = setInterval(updatetime, 1000);
