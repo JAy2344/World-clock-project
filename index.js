@@ -47,6 +47,11 @@ function updateCity(event) {
   let cityTimeZone = event.target.value;
   let citiesElement = document.querySelector("#cities");
 
+  
+ if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+ }
+ 
   // If "Select a City" is chosen → reset all cities
   if (!cityTimeZone) {
     clearInterval(intervalId);
@@ -76,6 +81,7 @@ function updateCity(event) {
     updatetime();
     return;
   }
+
 
   // Otherwise, show only the selected city
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
