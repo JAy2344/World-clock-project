@@ -31,13 +31,13 @@ main{
   border: none;
 }
 .container{
-   display: block;
-    max-width: 600px;
-    margin: 60px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+  display: block;
+  max-width: 600px;
+  margin: 60px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
 select{
     border: none;
     display: block;
@@ -63,6 +63,7 @@ select{
 }
 .date{
     opacity: 0.7;
+    display: block;
 
 }
 footer {
