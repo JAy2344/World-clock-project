@@ -70,7 +70,7 @@ select{
 
 }
 a.homepage {
-  display: inline-block;
+  display: block;
   margin: 15px auto;
   padding: 12px 20px;
   border-radius: 8px;
